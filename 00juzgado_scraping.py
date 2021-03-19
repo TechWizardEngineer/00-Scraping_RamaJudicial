@@ -1,6 +1,3 @@
-pip install PyDrive
-print("pydrive installed")
-
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 # from google.colab import auth
