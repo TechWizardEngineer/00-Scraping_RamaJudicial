@@ -64,9 +64,9 @@ base_dir_gdrive = "/content/gdrive/My Drive/Colab Notebooks/My_projects/00-Scrap
 #print(base_dir_gdrive)
 
 # Libraries needed for basic web-scraping
-from IPython.core.display import HTML
+# from IPython.core.display import HTML
 from bs4 import BeautifulSoup
-from IPython.display import IFrame
+# from IPython.display import IFrame
 import urllib3 # package required to interact with live webpage
 import pandas as pd # will use to store the data from the webpage
 import time
