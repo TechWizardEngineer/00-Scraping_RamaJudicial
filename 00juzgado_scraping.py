@@ -1,5 +1,3 @@
-pip list
-
 pip install PyDrive
 print("pydrive installed")
 
