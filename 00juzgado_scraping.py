@@ -27,38 +27,38 @@ import os
 base_dir_drive = "/content/drive/My Drive/Colab Notebooks/My_projects/00-Scraping_RamaJudicial/"
 base_dir_gdrive = "/content/gdrive/My Drive/Colab Notebooks/My_projects/00-Scraping_RamaJudicial/"
 
-gauth = GoogleAuth()
+# gauth = GoogleAuth()
 
-# Try to load saved client credentials
-gauth.LoadCredentialsFile("mycreds.txt")
+# # Try to load saved client credentials
+# gauth.LoadCredentialsFile("mycreds.txt")
 
-drive = GoogleDrive(gauth)
+# drive = GoogleDrive(gauth)
 
-if gauth.credentials is None:
-    # Authenticate if they're not there
+# if gauth.credentials is None:
+#     # Authenticate if they're not there
 
-    # This is what solved the issues:
-    gauth.GetFlow()
-    gauth.flow.params.update({'access_type': 'offline'})
-    gauth.flow.params.update({'approval_prompt': 'force'})
+#     # This is what solved the issues:
+#     gauth.GetFlow()
+#     gauth.flow.params.update({'access_type': 'offline'})
+#     gauth.flow.params.update({'approval_prompt': 'force'})
 
-    gauth.LocalWebserverAuth()
+#     gauth.LocalWebserverAuth()
 
-elif gauth.access_token_expired:
+# elif gauth.access_token_expired:
 
-    # Refresh them if expired
+#     # Refresh them if expired
 
-    gauth.Refresh()
-else:
+#     gauth.Refresh()
+# else:
 
-    # Initialize the saved creds
+#     # Initialize the saved creds
 
-    gauth.Authorize()
+#     gauth.Authorize()
 
-# Save the current credentials to a file
-gauth.SaveCredentialsFile("mycreds.txt")  
+# # Save the current credentials to a file
+# gauth.SaveCredentialsFile("mycreds.txt")  
 
-drive = GoogleDrive(gauth)
+# drive = GoogleDrive(gauth)
 
 #print(base_dir_drive)
 #print(base_dir_gdrive)
