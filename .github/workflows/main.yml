@@ -25,7 +25,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt;
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        
     - name: Install PyDrive
       run: |
         pip install PyDrive
