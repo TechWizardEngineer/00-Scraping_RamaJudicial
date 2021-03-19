@@ -1,4 +1,7 @@
-!pip install PyDrive
+pip list
+print(list)
+
+pip install PyDrive
 print("pydrive installed")
 
 from pydrive.auth import GoogleAuth
