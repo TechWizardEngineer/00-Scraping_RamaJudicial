@@ -31,6 +31,15 @@ jobs:
       run: |
         pip install PyDrive
         pip install gspread
+    - name: Set up Cloud SDK
+    - uses: google-github-actions/setup-gcloud@master
+      with:
+        project_id: ${{ secrets.cada-308105 }}
+        service_account_key: ${{ secrets.551c8972e753235a4d6452bc43426b79551ba58e }}
+        export_default_credentials: true
+
+    - name: Use gcloud CLI
+      run: gcloud info
     - name: Execute python script
       run: |
         python 00juzgado_scraping.py -r
