@@ -1,5 +1,3 @@
-pip install git+https://github.com/googledrive/PyDrive.git#egg=PyDrive
-
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 # from google.colab import auth
