@@ -1,7 +1,35 @@
+from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
+# from google.colab import auth
+# auth.authenticate_user()
+ 
+import gspread
+from oauth2client.client import GoogleCredentials
+gc = gspread.authorize(GoogleCredentials.get_application_default())
+
+# #from google.colab import auth
+# #auth.authenticate_user()
+
+# from pydrive.auth import GoogleAuth
+# from pydrive.drive import GoogleDrive
+# from google.colab import auth
+# from oauth2client.client import GoogleCredentials
+from gspread_dataframe import get_as_dataframe, set_with_dataframe
+
+# # Authenticate and create the PyDrive client.
+# auth.authenticate_user()
+
+
+import os
+base_dir_drive = "/content/drive/My Drive/Colab Notebooks/My_projects/00-Scraping_RamaJudicial/"
+base_dir_gdrive = "/content/gdrive/My Drive/Colab Notebooks/My_projects/00-Scraping_RamaJudicial/"
+
 gauth = GoogleAuth()
 
 # Try to load saved client credentials
 gauth.LoadCredentialsFile("mycreds.txt")
+
+drive = GoogleDrive(gauth)
 
 if gauth.credentials is None:
     # Authenticate if they're not there
@@ -28,33 +56,6 @@ else:
 gauth.SaveCredentialsFile("mycreds.txt")  
 
 drive = GoogleDrive(gauth)
-
-
-from google.colab import auth
-auth.authenticate_user()
- 
-import gspread
-from oauth2client.client import GoogleCredentials
-gc = gspread.authorize(GoogleCredentials.get_application_default())
-
-#from google.colab import auth
-#auth.authenticate_user()
-
-from pydrive.auth import GoogleAuth
-from pydrive.drive import GoogleDrive
-from google.colab import auth
-from oauth2client.client import GoogleCredentials
-from gspread_dataframe import get_as_dataframe, set_with_dataframe
-
-# Authenticate and create the PyDrive client.
-auth.authenticate_user()
-gauth = GoogleAuth()
-gauth.credentials = GoogleCredentials.get_application_default()
-drive = GoogleDrive(gauth)
-
-import os
-base_dir_drive = "/content/drive/My Drive/Colab Notebooks/My_projects/00-Scraping_RamaJudicial/"
-base_dir_gdrive = "/content/gdrive/My Drive/Colab Notebooks/My_projects/00-Scraping_RamaJudicial/"
 
 #print(base_dir_drive)
 #print(base_dir_gdrive)
