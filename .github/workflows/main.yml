@@ -1,14 +1,14 @@
 name: scheduled-run-dmv
 
 on:
-  #schedule:
+  schedule:
     # UTC time
-    #- cron: "*/5 * * * *"
+    - cron: "*/5 * * * *"
 # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [ avtjuzschedule ]
   pull_request:
-    branches: [ main ]
+    branches: [ avtjuzschedule ]
 
 jobs:
   build:
