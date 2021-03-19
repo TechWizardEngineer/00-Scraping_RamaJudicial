@@ -1,15 +1,3 @@
-def explicit():
-    from google.cloud import storage
-
-    # Explicitly use service account credentials by specifying the private key
-    # file.
-    storage_client = storage.Client.from_service_account_json(
-        'service_account.json')
-
-    # Make an authenticated API request
-    buckets = list(storage_client.list_buckets())
-    print(buckets)
-
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 # from google.colab import auth
@@ -18,7 +6,7 @@ from pydrive.drive import GoogleDrive
 import gspread
 from oauth2client.client import GoogleCredentials
 #gc = gspread.authorize(GoogleCredentials.get_application_default())
-gc = gspread.service_account()
+gc = gspread.service_account(${{secrets.GCE_SA_KEY}})
 
 
 # #from google.colab import auth
