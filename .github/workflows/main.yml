@@ -23,11 +23,12 @@ jobs:
       with:
         python-version: 3.7
     - name: Install dependencies
-    
       run: |
         python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        if [ -f requirements.txt ]; then pip install -r requirements.txt;
+    - name: Install PyDrive
+      run: |
+        pip install PyDrive
     - name: Execute python script
-    
       run: |
         python 00juzgado_scraping.py -r
