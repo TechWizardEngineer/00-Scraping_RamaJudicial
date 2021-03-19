@@ -7,7 +7,7 @@ from pydrive.drive import GoogleDrive
 import gspread
 from oauth2client.client import GoogleCredentials
 #gc = gspread.authorize(GoogleCredentials.get_application_default())
-gc = gspread.service_account()
+gc = gspread.service_account(filename='runner/.config/gspread/service_account.json')
 
 
 # #from google.colab import auth
