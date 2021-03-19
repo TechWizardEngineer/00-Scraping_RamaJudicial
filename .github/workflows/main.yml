@@ -32,6 +32,9 @@ jobs:
         pip install PyDrive
         pip install gspread
         pip install gspread-dataframe
+        pip install beautifulsoup4
+        pip install urllib3
+        pip install pandas
         
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@master
