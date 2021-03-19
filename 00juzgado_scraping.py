@@ -1,5 +1,4 @@
 pip list
-print(list)
 
 pip install PyDrive
 print("pydrive installed")
