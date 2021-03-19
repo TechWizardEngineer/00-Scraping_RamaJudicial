@@ -31,6 +31,7 @@ jobs:
       run: |
         pip install PyDrive
         pip install gspread
+        pip install gspread-dataframe
         
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@master
