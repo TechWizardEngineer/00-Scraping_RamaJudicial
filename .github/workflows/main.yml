@@ -30,4 +30,4 @@ jobs:
     - name: Execute python script
     
       run: |
-        python cadasas.py -r
+        python 00juzgado_scraping.py -r
