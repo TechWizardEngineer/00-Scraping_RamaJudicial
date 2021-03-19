@@ -17,7 +17,9 @@ from pydrive.drive import GoogleDrive
  
 import gspread
 from oauth2client.client import GoogleCredentials
-gc = gspread.authorize(GoogleCredentials.get_application_default())
+#gc = gspread.authorize(GoogleCredentials.get_application_default())
+gc = gspread.service_account(GoogleCredentials.get_application_default())
+
 
 # #from google.colab import auth
 # #auth.authenticate_user()
