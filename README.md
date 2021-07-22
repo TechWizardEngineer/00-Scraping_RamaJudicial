@@ -1,6 +1,6 @@
 # Scraping Rama-Judicial MVP
 
-This repo is the home for a scraping tool for judicial page of Colombia 
+This repo is the home for a scraping tool for judiciary page of Colombia 
 
 ## Content Table
 * [1.1 Project Structure](#project-structure)
